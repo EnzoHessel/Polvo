@@ -63,12 +63,36 @@
   * {
     @apply border-border;
   }
+  main {
+    /* background-image: url('/background.png'); */
+    /* background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+    background-color: #000000cb; /* Aumente o valor para escurecer mais */
+    background-blend-mode: darken;
+  }
+
   body {
+    position: relative;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url('/background.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #040300;
-    background-blend-mode: difference;
+    background-color: #000000f3;
+    mix-blend-mode: darken;
+    opacity: 1;
+    z-index: -1;
   }
 }

@@ -23,7 +23,7 @@ const Header = () => {
   ]
 
   return (
-    <div className="flex items-center justify-around w-full bg-primary text-white py-5 sticky">
+    <div className="flex items-center justify-around w-full bg-primary text-white py-5 sticky border-b-[#363636] border-b">
       <div className="flex gap-3">
         <Image src="/logo.svg" alt="Logo" width={32} height={32} />
         <p className={`${Fredo.className} font-normal text-2xl`}>Polvo</p>
@@ -36,8 +36,8 @@ const Header = () => {
         ))}
       </div>
       <div>
-        <Button className="uppercase" variant="default" size="default">
-          <span className='font-medium'>ENTRAR EM CONTATO agora</span>
+        <Button variant="default" size="default">
+          ENTRAR EM CONTATO AGORA
         </Button>
       </div>
     </div>
