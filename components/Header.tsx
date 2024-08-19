@@ -1,10 +1,8 @@
-import Image from 'next/image'
 import React from 'react'
-import { Fredoka } from 'next/font/google';
 import Link from 'next/link';
 import { Button } from './ui/button';
+import Logo from './Logo';
 
-const Fredo = Fredoka({ subsets: ["latin"] });
 
 const Header = () => {
   const Links = [
@@ -23,11 +21,8 @@ const Header = () => {
   ]
 
   return (
-    <div className="flex items-center justify-around w-full bg-primary text-white py-5 sticky border-b-[#363636] border-b">
-      <div className="flex gap-3">
-        <Image src="/logo.svg" alt="Logo" width={32} height={32} />
-        <p className={`${Fredo.className} font-normal text-2xl`}>Polvo</p>
-      </div>
+    <header className="flex items-center justify-around w-full bg-primary text-white py-5 border-b-[#363636] border-b">
+      <Logo />
       <div className="flex gap-12">
         {Links.map((link, index) => (
           <Link href="#" key={index}>
@@ -40,7 +35,7 @@ const Header = () => {
           ENTRAR EM CONTATO AGORA
         </Button>
       </div>
-    </div>
+    </header>
   )
 }
 
