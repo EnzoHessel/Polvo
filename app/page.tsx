@@ -2,6 +2,8 @@
 
 import About from "@/components/About";
 import Hero from "@/components/Hero";
+import Services from "@/components/Services";
+import Team from "@/components/Team";
 import Ticker from "@/components/Ticker";
 import Image from "next/image";
 
@@ -16,6 +18,12 @@ export default function Home() {
       </section>
       <section>
         <Ticker />
+      </section>
+      <section>
+        <Services />
+      </section>
+      <section>
+        <Team />
       </section>
       <div className="absolute inset-0 -z-10">
         <Image

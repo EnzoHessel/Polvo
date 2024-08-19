@@ -9,7 +9,7 @@ const FooterCopyright = () => (
         {['twitter', 'Linkedin', 'Github'].map(platform => (
           <Image
             key={platform}
-            src={`/${platform}.svg`}
+            src={`/icons/${platform}.svg`}
             alt={`${platform} logo`}
             width={24}
             height={24}
