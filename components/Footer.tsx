@@ -7,7 +7,7 @@ import Image from 'next/image';
 const Footer = () => {
   return (
     <footer className="relative">
-      <Image src="/background-2.png" alt="Footer Background" layout="fill" className="-z-10 object-cover"/>
+      <Image src="/background-2.png" alt="Footer Background" layout="fill" className="-z-10 object-cover" quality={100}/>
       <div className="flex justify-center items-center pt-16 pb-12">
         <div className='max-w-[1000px]'>
           <div className="footer-image flex gap-16 text-white">
