@@ -10,7 +10,7 @@ const About = () => {
       <div className="flex flex-col gap-[10px]">
         <h2 className="text-sm font-normal">CASES DE EXCELÊNCIA</h2>
         <h3 className="font-medium text-2xl text-[#EEE]">Tenha sucesso conosco</h3>
-        <p className="max-w-[568px] text-[#A7A6A6]">
+        <p className="max-w-[568px] text-[#A7A6A6] text-sm">
           Atendendo desde startups até multinacionais, a Polvo oferece soluções completas para atender às necessidades de cada cliente. Seja desenvolvendo projetos do zero, terceirizando squads especializados ou potencializando estratégias de marketing digital, estamos prontos para impulsionar o crescimento e o sucesso do seu negócio no mundo digital.
         </p>
       </div>
