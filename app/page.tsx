@@ -1,6 +1,7 @@
-"use client"
+"use client";
 
 import About from "@/components/About";
+import FAQ from "@/components/FAQ";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import Team from "@/components/Team";
@@ -25,7 +26,10 @@ export default function Home() {
       <section>
         <Team />
       </section>
-      <div className="absolute inset-0 -z-10">
+      <section className="w-full">
+        <FAQ />
+      </section>
+      <div className="fixed inset-0 -z-10">
         <Image
           src="/background.png"
           alt="Background"
@@ -35,7 +39,7 @@ export default function Home() {
           priority
         />
       </div>
-  </main>
+    </main>
   );
 }
 

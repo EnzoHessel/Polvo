@@ -21,7 +21,7 @@ const Header = () => {
   ]
 
   return (
-    <header className="flex justify-center items-center bg-primary text-white py-5 border-b-[#363636] border-b">
+    <header className="flex justify-center items-center bg-primary sticky top-0 z-50 text-white py-5 border-b-[#363636] border-b">
       <div className="flex items-center justify-between max-w-[1000px] w-full">
         <Logo />
         <div className="flex gap-12">
