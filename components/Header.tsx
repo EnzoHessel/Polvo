@@ -21,19 +21,21 @@ const Header = () => {
   ]
 
   return (
-    <header className="flex items-center justify-around w-full bg-primary text-white py-5 border-b-[#363636] border-b">
-      <Logo />
-      <div className="flex gap-12">
-        {Links.map((link, index) => (
-          <Link href="#" key={index}>
-            <p className='text-base font-normal uppercase'>{link.name}</p>
-          </Link>
-        ))}
-      </div>
-      <div>
-        <Button variant="default" size="default">
-          ENTRAR EM CONTATO AGORA
-        </Button>
+    <header className="flex justify-center items-center bg-primary text-white py-5 border-b-[#363636] border-b">
+      <div className="flex items-center justify-between max-w-[1000px] w-full">
+        <Logo />
+        <div className="flex gap-12">
+          {Links.map((link, index) => (
+            <Link href="#" key={index}>
+              <p className='text-base font-normal uppercase'>{link.name}</p>
+            </Link>
+          ))}
+        </div>
+        <div>
+          <Button variant="default" size="default">
+            ENTRAR EM CONTATO AGORA
+          </Button>
+        </div>
       </div>
     </header>
   )

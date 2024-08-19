@@ -21,8 +21,7 @@
     --secondary-foreground: 210 40% 98%;
   }
 
-
-  .footer-image {
-    padding: 64px 75px 48px 75px;
+  section {
+    max-width: 1000px !important;
   }
 }

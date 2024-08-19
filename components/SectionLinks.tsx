@@ -11,7 +11,7 @@ const sections = [
 const SectionLinks = () => (
   <div className="flex items-start justify-end w-full gap-8">
     {sections.map(({ title, items }) => (
-      <div key={title} className="min-w-[140px]">
+      <div key={title} className="min-w-[97.6px]">
         <p className="text-[#98A2B3]">{title}</p>
         <ul className="flex flex-col gap-3 pt-4">
           {items.map(item => (
