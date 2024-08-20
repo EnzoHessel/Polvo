@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -33,29 +34,35 @@ const FAQ = () => {
       </div>
       <div className="mt-10">
         {faqs.map((faq, index) => (
-          <div key={index} className="acordion">
+          <div key={index} className="accordion">
             <button
               className="w-full text-left text-xl font-medium text-[#eee] py-2 flex justify-between items-center"
               onClick={() => toggleAccordion(index)}
             >
               {faq.question}
               <span>
-                <Image
+                <motion.img
                   src={activeIndex === index ? "/icons/open.svg" : "/icons/close.svg"}
                   alt={activeIndex === index ? "Collapse" : "Expand"}
                   width={24}
                   height={26}
                   className="object-contain"
+                  initial={{ rotate: 0 }}
+                  animate={{ rotate: activeIndex === index ? 180 : 0 }}
+                  transition={{ duration: 0.3 }}
                 />
               </span>
             </button>
-            <div
-              className={`overflow-hidden transition-all duration-300 ${activeIndex === index ? "max-h-screen" : "max-h-0"}`}
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: activeIndex === index ? "auto" : 0, opacity: activeIndex === index ? 1 : 0 }}
+              transition={{ duration: 0.3 }}
+              className="overflow-hidden"
             >
               <div className="text-lg text-[#667085] py-2">
                 {faq.answer}
               </div>
-            </div>
+            </motion.div>
           </div>
         ))}
       </div>

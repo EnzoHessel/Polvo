@@ -4,6 +4,8 @@ import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
+import { TypeAnimation } from "react-type-animation";
+
 
 const Hero = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -21,7 +23,7 @@ const Hero = () => {
       <div
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className="relative w-[616px] h-[452px]"
+        className="relative w-[616px] h-[452px] rounded-[8px]"
       >
         <motion.div
           initial={{ opacity: 1 }}
@@ -32,8 +34,8 @@ const Hero = () => {
           <Image
             src="/hero.svg"
             alt="Hero"
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: "cover" }}
           />
         </motion.div>
         <motion.div
@@ -45,14 +47,28 @@ const Hero = () => {
           <Image
             src="/hero-2.svg"
             alt="Hero Colorido"
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: "cover" }}
+            quality={100}
           />
         </motion.div>
       </div>
       <div className="max-w-40">
         <p className="text-2xl">
-          Unleashing the <span className="text-secondary">Future_</span> of Innovation. <br/><br/> <span className="text-secondary">#We are Polvo</span>
+          Unleashing the{' '}
+          <TypeAnimation
+            sequence={[
+              '_Future',
+              2000,
+              'Future_',
+              2000,
+            ]}
+            wrapper="span"
+            cursor={true}
+            repeat={Infinity}
+            className="text-secondary"
+          />
+          {' '}of Innovation. <br/><br/> <span className="text-secondary">#We are Polvo</span>
         </p>
       </div>
     </section>

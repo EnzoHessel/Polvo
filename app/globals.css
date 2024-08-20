@@ -25,12 +25,12 @@
     max-width: 1000px !important;
   }
 
-  .acordion {
+  .accordion {
     padding-bottom: 25px;
     padding-top: 25px;
   }
 
-  .acordion:not(:last-child) {
+  .accordion:not(:last-child) {
     border-bottom: 1px solid #EAECF0;
   }
 }

@@ -31,8 +31,8 @@ export default function Home() {
         <Image
           src="/background.png"
           alt="Background"
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{ objectFit: "cover" }}
           quality={100}
           priority
         />
@@ -40,4 +40,3 @@ export default function Home() {
     </main>
   );
 }
-
