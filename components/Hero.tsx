@@ -1,17 +1,21 @@
 "use client";
 
-import Image from "next/image";
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { Button } from "./ui/button";
-import { TypeAnimation } from "react-type-animation";
-
+import Image from 'next/image';
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Button } from './ui/button';
+import { TypeAnimation } from 'react-type-animation';
 
 const Hero = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section className="flex justify-between gap-8">
+    <motion.section
+      className="flex justify-between gap-8"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="max-w-40 flex flex-col gap-8">
         <h2 className="text-xl">
           Ninguém inova sozinho. Do Agro ao Varejo. De Fintech a Anytech. A maneira como desenvolvemos software é única.
@@ -35,7 +39,7 @@ const Hero = () => {
             src="/hero.svg"
             alt="Hero"
             fill
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: 'cover' }}
           />
         </motion.div>
         <motion.div
@@ -48,7 +52,7 @@ const Hero = () => {
             src="/hero-2.svg"
             alt="Hero Colorido"
             fill
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: 'cover' }}
             quality={100}
           />
         </motion.div>
@@ -71,7 +75,7 @@ const Hero = () => {
           {' '}of Innovation. <br/><br/> <span className="text-secondary">#We are Polvo</span>
         </p>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

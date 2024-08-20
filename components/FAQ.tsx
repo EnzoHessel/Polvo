@@ -1,24 +1,23 @@
 "use client";
 
-import Image from "next/image";
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const faqs = [
     {
-      question: "What is the product?",
-      answer: "The product is a comprehensive solution for managing your tasks efficiently."
+      question: 'What is the product?',
+      answer: 'The product is a comprehensive solution for managing your tasks efficiently.'
     },
     {
-      question: "How does billing work?",
-      answer: "Billing is done on a monthly basis, and you can cancel anytime."
+      question: 'How does billing work?',
+      answer: 'Billing is done on a monthly basis, and you can cancel anytime.'
     },
     {
-      question: "Is there a free trial?",
-      answer: "Yes, we offer a 14-day free trial for new users."
+      question: 'Is there a free trial?',
+      answer: 'Yes, we offer a 14-day free trial for new users.'
     }
   ];
 
@@ -42,8 +41,8 @@ const FAQ = () => {
               {faq.question}
               <span>
                 <motion.img
-                  src={activeIndex === index ? "/icons/open.svg" : "/icons/close.svg"}
-                  alt={activeIndex === index ? "Collapse" : "Expand"}
+                  src={activeIndex === index ? '/icons/open.svg' : '/icons/close.svg'}
+                  alt={activeIndex === index ? 'Collapse' : 'Expand'}
                   width={24}
                   height={26}
                   className="object-contain"
@@ -55,7 +54,7 @@ const FAQ = () => {
             </button>
             <motion.div
               initial={{ height: 0, opacity: 0 }}
-              animate={{ height: activeIndex === index ? "auto" : 0, opacity: activeIndex === index ? 1 : 0 }}
+              animate={{ height: activeIndex === index ? 'auto' : 0, opacity: activeIndex === index ? 1 : 0 }}
               transition={{ duration: 0.3 }}
               className="overflow-hidden"
             >

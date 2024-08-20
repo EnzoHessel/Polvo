@@ -11,12 +11,12 @@ const Footer = () => {
         src="/background-2.png"
         alt="Footer Background"
         fill
-        style={{ objectFit: "cover" }}
+        style={{ objectFit: 'cover' }}
         className="-z-10"
         quality={100}
       />
       <div className="flex justify-center items-center pt-16 pb-12">
-        <div className='max-w-[1000px]'>
+        <div className="max-w-[1000px]">
           <div className="footer-image flex gap-16 text-white">
             <div className="flex flex-col gap-8">
               <Logo />

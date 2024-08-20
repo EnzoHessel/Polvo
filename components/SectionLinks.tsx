@@ -13,7 +13,7 @@ const SectionLinks = () => (
     {sections.map(({ title, items }) => (
       <div key={title} className="min-w-[97.6px]">
         <p className="text-[#98A2B3]">{title}</p>
-        <ul className="flex flex-col gap-3 pt-4">
+        <ul className="flex flex-col gap-3 pt-4" aria-label={`Links da seção ${title}`}>
           {items.map(item => (
             <li key={item}>{item}</li>
           ))}

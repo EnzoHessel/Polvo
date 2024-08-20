@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 
 const FooterCopyright = () => (
-  <div className="flex justify-center items-center w-full py-12 px-[75px] text-[#98A2B3] bg-[#040300] ">
+  <div className="flex justify-center items-center w-full py-12 px-[75px] text-[#98A2B3] bg-[#040300]">
     <div className="max-w-[1000px] w-full flex justify-between">
       <p>© 2024 Polvo. All rights reserved.</p>
       <div className="flex gap-6">
@@ -10,7 +10,7 @@ const FooterCopyright = () => (
           <Image
             key={platform}
             src={`/icons/${platform}.svg`}
-            alt={`${platform} logo`}
+            alt={`Logo do ${platform}`}
             width={24}
             height={24}
           />
