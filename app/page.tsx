@@ -8,35 +8,57 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="relative flex flex-col gap-16 items-center py-16 min-h-screen text-white">
-      <section>
-        <Hero />
-      </section>
-      <section>
-        <About />
-      </section>
-      <section>
-        <Ticker />
-      </section>
-      <section>
-        <Services />
-      </section>
-      <section>
-        <Team />
-      </section>
-      <section className="w-full">
-        <FAQ />
-      </section>
+    <>
+      {/* Background Image */}
       <div className="fixed inset-0 -z-10">
         <Image
           src="/background.png"
-          alt="Background"
+          alt="Background image"
           fill
           style={{ objectFit: "cover" }}
           quality={100}
           priority
         />
       </div>
-    </main>
+
+      {/* Main Content */}
+      <main className="relative flex flex-col gap-16 items-center py-16 min-h-screen text-white">
+
+        {/* Hero Section */}
+        <section aria-label="Hero section">
+          <Hero />
+        </section>
+
+        {/* About Section */}
+        <section aria-labelledby="about-heading">
+          <h2 id="about-heading" className="sr-only">About Us</h2>
+          <About />
+        </section>
+
+        {/* Ticker Section */}
+        <section aria-labelledby="ticker-heading">
+          <h2 id="ticker-heading" className="sr-only">Latest Updates</h2>
+          <Ticker />
+        </section>
+
+        {/* Services Section */}
+        <section aria-labelledby="services-heading">
+          <h2 id="services-heading" className="sr-only">Our Services</h2>
+          <Services />
+        </section>
+
+        {/* Team Section */}
+        <section aria-labelledby="team-heading">
+          <h2 id="team-heading" className="sr-only">Meet Our Team</h2>
+          <Team />
+        </section>
+
+        {/* FAQ Section */}
+        <section aria-labelledby="faq-heading" className="w-full">
+          <h2 id="faq-heading" className="sr-only">Frequently Asked Questions</h2>
+          <FAQ />
+        </section>
+      </main>
+    </>
   );
 }

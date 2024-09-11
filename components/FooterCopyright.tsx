@@ -13,6 +13,7 @@ const FooterCopyright = () => (
             alt={`Logo do ${platform}`}
             width={24}
             height={24}
+            draggable="false"
           />
         ))}
       </div>

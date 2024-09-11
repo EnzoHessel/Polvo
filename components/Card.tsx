@@ -14,6 +14,7 @@ const Card = ({ image, title }: CardProps) => {
         className="object-cover"
         width={40}
         height={40}
+        draggable="false"
       />
       <p className="text-sm text-[#EEEEEE] uppercase">{title}</p>
     </div>

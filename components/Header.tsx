@@ -35,7 +35,7 @@ const Header = () => {
           {Links.map((link, index) => (
             <Link href={link.href} key={index}>
               <motion.p
-                className='text-base font-normal uppercase hover:-translate-y-0.5 duration-200'
+                className='text-base font-normal uppercase hover:-translate-y-1 duration-200'
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}

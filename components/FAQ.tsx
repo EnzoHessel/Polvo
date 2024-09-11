@@ -46,6 +46,7 @@ const FAQ = () => {
                   width={24}
                   height={26}
                   className="object-contain"
+                  draggable="false"
                   initial={{ rotate: 0 }}
                   animate={{ rotate: activeIndex === index ? 180 : 0 }}
                   transition={{ duration: 0.3 }}

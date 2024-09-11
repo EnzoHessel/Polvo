@@ -24,6 +24,7 @@ const About = () => {
           width={142}
           height={142}
           className="z-10"
+          draggable="false"
         />
       </div>
       <div className="flex flex-col gap-[10px]">

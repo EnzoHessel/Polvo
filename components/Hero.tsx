@@ -40,6 +40,7 @@ const Hero = () => {
             alt="Hero"
             fill
             style={{ objectFit: 'cover' }}
+            draggable="false"
           />
         </motion.div>
         <motion.div
@@ -54,6 +55,7 @@ const Hero = () => {
             fill
             style={{ objectFit: 'cover' }}
             quality={100}
+            draggable="false"
           />
         </motion.div>
       </div>

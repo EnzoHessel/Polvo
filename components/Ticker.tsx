@@ -10,7 +10,7 @@ const Ticker = () => {
       <Marquee>
         {images.map((image, index) => (
           <div key={index} className="px-[38px]">
-            <Image src={`/Ticker/${image}`} alt={`Ícone ${index + 1}`} width={148} height={38} />
+            <Image src={`/Ticker/${image}`} alt={`Ícone ${index + 1}`} width={148} height={38} draggable="false" />
           </div>
         ))}
       </Marquee>
