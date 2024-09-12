@@ -9,7 +9,6 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      {/* Background Image */}
       <div className="fixed inset-0 -z-10">
         <Image
           src="/background.png"
@@ -21,10 +20,8 @@ export default function Home() {
         />
       </div>
 
-      {/* Main Content */}
       <main className="relative flex flex-col lg:gap-16 items-center min-h-screen text-white">
 
-        {/* Hero Section */}
         <section aria-label="Hero section">
           <Hero />
         </section>

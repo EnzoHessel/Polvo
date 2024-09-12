@@ -3,24 +3,25 @@ import SectionLinks from './SectionLinks';
 import FooterCopyright from './FooterCopyright';
 import { Button } from './ui/button';
 import Image from 'next/image';
+import styles from "@/styles/footer.module.css";
 
 const Footer = () => {
   return (
-    <footer className="relative">
+    <footer className={styles.footer}>
       <Image
         src="/background-2.png"
         alt="Footer Background"
         fill
         style={{ objectFit: 'cover' }}
-        className="-z-10"
+        className={`${styles.backgroundImage} -z-10`}
         quality={100}
       />
-      <div className="flex justify-center items-center pt-16 pb-12">
-        <div className="max-w-[1000px]">
-          <div className="footer-image flex gap-16 text-white">
-            <div className="flex flex-col gap-8">
+      <div className={styles.footerContainer}>
+        <div className={styles.contentContainer}>
+          <div className={styles.footerContent}>
+            <div className={styles.leftContent}>
               <Logo />
-              <p>Unleashing the <span className="text-secondary">Future_</span> of Innovation.</p>
+              <p>Unleashing the <span className={styles.textSecondary}>Future_</span> of Innovation.</p>
               <div>
                 <Button variant="default" size="default">
                   CONSTRUIR PRESENÇA DIGITAL AGORA

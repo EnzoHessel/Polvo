@@ -1,3 +1,7 @@
+.content {
+  @apply mb-14
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -43,7 +47,7 @@
 }
 
 .answer {
-  font-size: 1.125rem; /* Equivalente a text-lg */
+  font-size: 1.125rem;
   color: #667085;
 }
 
@@ -53,7 +57,7 @@
 
 @media (max-width: 768px) {
   .content {
-    @apply flex flex-col items-center
+    @apply flex flex-col items-center;
   }
 
   .container {
