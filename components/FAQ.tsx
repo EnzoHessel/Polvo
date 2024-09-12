@@ -2,22 +2,35 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import styles from "@/styles/faq.module.css";
 
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const faqs = [
     {
-      question: 'What is the product?',
-      answer: 'The product is a comprehensive solution for managing your tasks efficiently.'
+      question: 'Quais serviços de software vocês oferecem?',
+      answer: 'Nós oferecemos uma ampla gama de soluções de software personalizadas, incluindo desenvolvimento de sistemas sob demanda, automação de processos, aplicativos web e móveis, além de integração com APIs e outras plataformas'
     },
     {
-      question: 'How does billing work?',
-      answer: 'Billing is done on a monthly basis, and you can cancel anytime.'
+      question: 'Vocês desenvolvem sites e landing pages?',
+      answer: 'Sim! Criamos sites institucionais, e-commerce e landing pages otimizadas para conversão. Cada projeto é responsivo, rápido e focado em oferecer a melhor experiência de usuário, com atenção à performance e SEO.'
     },
     {
-      question: 'Is there a free trial?',
-      answer: 'Yes, we offer a 14-day free trial for new users.'
+      question: 'Como funciona o processo de UI/UX Design?',
+      answer: 'Nosso processo de UI/UX começa com uma pesquisa detalhada sobre as necessidades dos usuários e as metas do projeto. A partir disso, criamos wireframes, protótipos interativos e iteramos com base no feedback até chegar em uma interface funcional, intuitiva e esteticamente atraente.'
+    },
+    {
+      question: 'Vocês oferecem serviços de Product Design?',
+      answer: 'Sim, oferecemos Product Design com foco em todo o ciclo de vida do produto. Desde a concepção da ideia e pesquisa de mercado, até prototipagem, validação com usuários e colaboração com equipes de desenvolvimento para garantir a entrega de soluções robustas.'
+    },
+    {
+      question: 'Como vocês garantem que os sites são otimizados para SEO?',
+      answer: 'Utilizamos as melhores práticas de SEO, desde a estrutura do código, otimização de velocidade e usabilidade, até o uso correto de tags, meta descrições e palavras-chave. Nossa equipe também realiza auditorias periódicas para assegurar que o site continua competitivo nos rankings de busca.'
+    },
+    {
+      question: 'Como funciona o suporte e manutenção após a entrega do projeto?',
+      answer: 'após a entrega do projeto? Oferecemos suporte contínuo e manutenção técnica para todos os nossos projetos. Isso inclui atualizações de segurança, melhorias de performance e ajustes baseados em feedback de usuários. Nosso time está disponível para garantir que seu produto digital funcione de forma estável e eficiente após a implementação.'
     }
   ];
 
@@ -26,26 +39,28 @@ const FAQ = () => {
   };
 
   return (
-    <div>
-      <div className="flex flex-col items-center">
-        <h2 className="text-4xl text-[#EEE] font-semibold">Frequently asked questions</h2>
-        <p className="text-xl text-[#667085] pt-5 font-normal">Everything you need to know about the product and billing.</p>
+    <div className={styles.content}>
+      <div className={styles.container}>
+        <h2 className={styles.title}>Perguntas Frequentes <br/>(FAQ)</h2>
+        <p className={styles.subtitle}>Tudo o que você precisa saber sobre nossos serviços de software, design e desenvolvimento digital.</p>
       </div>
-      <div className="mt-10">
+      <div >
         {faqs.map((faq, index) => (
-          <div key={index} className="accordion">
+          <div key={index} className={styles.accordion}>
             <button
-              className="w-full text-left text-xl font-medium text-[#eee] py-2 flex justify-between items-center"
+              className={styles.button}
               onClick={() => toggleAccordion(index)}
             >
-              {faq.question}
+              <p className={styles.p}>
+                {faq.question}
+              </p>
               <span>
                 <motion.img
                   src={activeIndex === index ? '/icons/open.svg' : '/icons/close.svg'}
                   alt={activeIndex === index ? 'Collapse' : 'Expand'}
                   width={24}
                   height={26}
-                  className="object-contain"
+                  className={styles.icon}
                   draggable="false"
                   initial={{ rotate: 0 }}
                   animate={{ rotate: activeIndex === index ? 180 : 0 }}
@@ -57,9 +72,9 @@ const FAQ = () => {
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: activeIndex === index ? 'auto' : 0, opacity: activeIndex === index ? 1 : 0 }}
               transition={{ duration: 0.3 }}
-              className="overflow-hidden"
+              className={styles.overflowHidden}
             >
-              <div className="text-lg text-[#667085] py-2">
+              <div className={styles.answer}>
                 {faq.answer}
               </div>
             </motion.div>

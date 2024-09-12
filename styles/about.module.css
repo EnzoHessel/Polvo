@@ -1,0 +1,55 @@
+.container {
+  @apply flex gap-8;
+}
+
+.imageContainer {
+  @apply relative flex justify-center items-center;
+}
+
+.backgroundImage {
+  @apply absolute object-cover rounded-[8px];
+}
+
+.logoImage {
+  @apply z-10;
+}
+
+.textContainer {
+  @apply flex flex-col gap-2.5;
+}
+
+.title {
+  @apply text-sm font-normal;
+}
+
+.subtitle {
+  @apply font-medium text-2xl text-[#EEE];
+}
+
+.description {
+  @apply text-[#A7A6A6] text-sm;
+}
+
+@media (min-width: 1024px) {
+  .imageContainer {
+    @apply w-[400px] h-[235px];
+  }
+
+  .description {
+    @apply max-w-[568px];
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    @apply flex-col p-4 items-center;
+  }
+
+  .imageContainer {
+    @apply w-[358px] h-[211px];
+  }
+
+  .description {
+    @apply max-w-[368px];
+  }
+}

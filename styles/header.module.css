@@ -1,0 +1,29 @@
+.header {
+  @apply flex justify-center items-center bg-primary sticky top-0 z-50 text-white md:py-5 border-b-[#363636] border-b;
+}
+
+.header__content {
+  @apply flex items-center justify-between max-w-[1000px] w-full;
+
+  @media screen and (max-width: 640px) {
+    padding: 20px 16px;
+  }
+}
+
+.link {
+  @apply flex gap-12;
+
+  @media screen and (max-width: 640px) {
+    display: none;
+  }
+}
+
+.p__link {
+  @apply text-base font-normal uppercase;
+} 
+
+.button {
+  @media screen and (max-width: 640px) {
+    display: none;
+  }
+}

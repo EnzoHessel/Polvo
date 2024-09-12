@@ -1,0 +1,33 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem 2rem;
+  background-color: #121212;
+  border: 1px solid #363636;
+  border-radius: 8px;
+  width: 232px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  @apply hover:border-secondary;
+}
+
+.card:hover {
+  transform: translateY(-0.25rem);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.title {
+  font-size: 0.875rem;
+  color: #eeeeee;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 358px;
+    @apply mx-4;
+  }
+}

@@ -1,0 +1,44 @@
+.teamContainer {
+  display: flex;
+  gap: 1.5rem;
+  background-color: #121212;
+  padding: 2rem;
+  border: 1px solid #363636;
+  border-radius: 8px;
+}
+
+.imageWrapper {
+  display: flex;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 576px;
+}
+
+.heading {
+  font-size: 0.875rem;
+  color: #eee;
+}
+
+.subheading {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #eee;
+  padding: 10px 0;
+}
+
+.paragraph {
+  font-size: 0.875rem;
+  color: #a7a6a6;
+}
+
+@media (max-width: 768px) {
+  .teamContainer {
+    margin-top: 24px;
+    width: 358px;
+    @apply flex flex-col;
+  }
+}

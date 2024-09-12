@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Button } from './ui/button';
 import Logo from './Logo';
 import { motion } from 'framer-motion';
+import styles from '@/styles/header.module.css';
 
 const Header = () => {
   const Links = [
@@ -24,18 +25,18 @@ const Header = () => {
 
   return (
     <motion.header
-      className="flex justify-center items-center bg-primary sticky top-0 z-50 text-white py-5 border-b-[#363636] border-b"
+      className={styles.header}
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="flex items-center justify-between max-w-[1000px] w-full">
+      <div className={styles.header__content}>
         <Logo />
-        <div className="flex gap-12">
+        <div className={styles.link}>
           {Links.map((link, index) => (
             <Link href={link.href} key={index}>
               <motion.p
-                className='text-base font-normal uppercase hover:-translate-y-1 duration-200'
+                className={styles.p__link}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -49,6 +50,7 @@ const Header = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: Links.length * 0.1 }}
+          className={styles.button}
         >
           <Button variant="default" size="default">
             ENTRAR EM CONTATO AGORA

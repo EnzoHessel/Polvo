@@ -5,35 +5,37 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from './ui/button';
 import { TypeAnimation } from 'react-type-animation';
+import styles from '@/styles/hero.module.css';
 
 const Hero = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <motion.section
-      className="flex justify-between gap-8"
+      className={styles.hero}
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="max-w-40 flex flex-col gap-8">
-        <h2 className="text-xl">
+      <div className={styles.heroText}>
+        <h2>
           Ninguém inova sozinho. Do Agro ao Varejo. De Fintech a Anytech. A maneira como desenvolvemos software é única.
         </h2>
         <Button variant="default" size="default">
           COMEÇAR AGORA
         </Button>
       </div>
+
       <div
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className="relative w-[616px] h-[452px] rounded-[8px]"
+        className={styles.imageContainer}
       >
         <motion.div
           initial={{ opacity: 1 }}
           animate={{ opacity: isHovered ? 0 : 1 }}
           transition={{ duration: 0.5 }}
-          className="absolute inset-0"
+          className={styles.image}
         >
           <Image
             src="/hero.svg"
@@ -47,7 +49,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: isHovered ? 1 : 0 }}
           transition={{ duration: 0.5 }}
-          className="absolute inset-0"
+          className={styles.image}
         >
           <Image
             src="/hero-2.svg"
@@ -59,22 +61,18 @@ const Hero = () => {
           />
         </motion.div>
       </div>
-      <div className="max-w-40">
-        <p className="text-2xl">
+
+      <div className={styles.heroFooter}>
+        <p>
           Unleashing the{' '}
           <TypeAnimation
-            sequence={[
-              '_Future',
-              2000,
-              'Future_',
-              2000,
-            ]}
+            sequence={['_Future', 2000, 'Future_', 2000]}
             wrapper="span"
             cursor={true}
             repeat={Infinity}
             className="text-secondary"
           />
-          {' '}of Innovation. <br/><br/> <span className="text-secondary">#We are Polvo</span>
+          {' '}of Innovation. <br /><br /> <span className="text-secondary">#We are Polvo</span>
         </p>
       </div>
     </motion.section>

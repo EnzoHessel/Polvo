@@ -21,16 +21,25 @@
     --secondary-foreground: 210 40% 98%;
   }
 
+  body::-webkit-scrollbar {
+    width: 8px;
+    background-color: hsl(var(--primary));
+  }
+
+  body::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
   section {
     max-width: 1000px !important;
-  }
-
-  .accordion {
-    padding-bottom: 25px;
-    padding-top: 25px;
-  }
-
-  .accordion:not(:last-child) {
-    border-bottom: 1px solid #EAECF0;
   }
 }
