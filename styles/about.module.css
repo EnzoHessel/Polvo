@@ -1,17 +1,17 @@
-.container {
-  @apply flex gap-8;
+.aboutContainer {
+  @apply flex gap-8; /* Layout principal com espaçamento */
 }
 
 .imageContainer {
-  @apply relative flex justify-center items-center;
+  @apply relative flex justify-center items-center; /* Centraliza a imagem dentro do container */
 }
 
 .backgroundImage {
-  @apply absolute object-cover rounded-[8px];
+  @apply absolute object-cover rounded-lg; /* Propriedades Tailwind aplicadas de forma otimizada */
 }
 
 .logoImage {
-  @apply z-10;
+  @apply z-10; /* Z-index para sobrepor outros elementos */
 }
 
 .textContainer {
@@ -41,7 +41,7 @@
 }
 
 @media (max-width: 768px) {
-  .container {
+  .aboutContainer {
     @apply flex-col p-4 items-center;
   }
 

@@ -7,7 +7,7 @@ import styles from '@/styles/about.module.css';
 const About = () => {
   return (
     <motion.section
-      className={styles.container}
+      className={styles.aboutContainer}
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}

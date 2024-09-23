@@ -1,29 +1,31 @@
 .content {
-  @apply mb-14
+  @apply mb-14 flex flex-col items-center;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @apply px-4 pt-6 flex flex-col items-center justify-center;
 }
 
 .title {
-  font-size: 2.5rem; /* Equivalente a text-4xl */
+  font-size: 2.5rem; /* text-4xl */
   color: #EEE;
-  font-weight: 600; /* Equivalente a font-semibold */
+  font-weight: 600; /* font-semibold */
   text-align: center;
+  white-space: nowrap;
 }
 
 .subtitle {
-  font-size: 1.25rem; /* Equivalente a text-xl */
+  font-size: 1.25rem; /* text-xl */
   color: #667085;
-  padding-top: 1.25rem; /* Equivalente a pt-5 */
-  font-weight: 400; /* Equivalente a font-normal */
+  padding-top: 1.25rem; /* pt-5 */
+  font-weight: 400; /* font-normal */
+  text-align: center;
 }
 
 .accordion {
-  margin-top: 2.5rem; /* Equivalente a mt-10 */
+  margin-top: 2.5rem; /* mt-10 */
+  width: 100%; /* Para ocupar toda a largura */
+  @apply mx-4; /* Adiciona margem lateral */
 }
 
 .accordion:not(:last-child) {
@@ -33,10 +35,10 @@
 .button {
   width: 100%;
   text-align: left;
-  font-size: 1.25rem; /* Equivalente a text-xl */
-  font-weight: 500; /* Equivalente a font-medium */
+  font-size: 1.25rem; /* text-xl */
+  font-weight: 500; /* font-medium */
   color: #eee;
-  padding: 0.5rem 0; /* Equivalente a py-2 */
+  padding: 0.5rem 0; /* py-2 */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,12 +49,22 @@
 }
 
 .answer {
-  font-size: 1.125rem;
+  font-size: 1.125rem; /* text-lg */
   color: #667085;
 }
 
 .overflowHidden {
-  @apply my-3
+  @apply my-3;
+}
+
+/* Ajustes de responsividade */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 2rem; /* Reduz o tamanho do título */
+  }
+  .subtitle {
+    font-size: 1rem; /* Reduz o tamanho da legenda */
+  }
 }
 
 @media (max-width: 768px) {
@@ -60,36 +72,30 @@
     @apply flex flex-col items-center;
   }
 
-  .container {
-    align-items: center;
-    @apply px-4 pt-6 flex flex-col items-center justify-center ;
+  .accordion {
+    @apply w-full max-w-[358px] mx-2; /* Ocupa 100% da largura e ajusta a margem */
   }
 
   .title {
-    text-align: center;
-    white-space: nowrap;
-    font-size: 30px;
+    font-size: 1.75rem; /* Reduz ainda mais o tamanho do título */
     font-weight: 600;
-    line-height: 38px;
+    line-height: 2rem;
+    text-align: center;
   }
 
   .subtitle {
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: 28px;
+    line-height: 1.5rem;
     text-align: center;
   }
 
   .button {
-    @apply max-w-[358px] flex justify-between;
+    @apply w-full flex justify-between; /* Ajusta a largura para caber no layout */
   }
 
   .p {
-    @apply max-w-[294px];
-  }
-
-  .accordion {
-    @apply w-[398px] mx-4;
+    @apply w-full; /* O texto da pergunta agora ocupa toda a largura */
   }
 
 }
