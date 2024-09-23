@@ -95,7 +95,6 @@
   }
 
   .p {
-    @apply w-full; /* O texto da pergunta agora ocupa toda a largura */
+    @apply w-full max-w-80; /* O texto da pergunta agora ocupa toda a largura */
   }
-
 }

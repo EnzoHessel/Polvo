@@ -1,5 +1,5 @@
 .card {
-  @apply flex flex-col gap-6 p-6 bg-[#121212] border border-[#363636] rounded-lg w-[232px] transition-transform;
+  @apply flex flex-col gap-6 p-6 bg-[#121212] border border-[#363636] rounded-[8px] w-[232px] transition-transform;
 }
 
 .card:hover {
