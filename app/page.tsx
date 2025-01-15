@@ -3,24 +3,11 @@ import FAQ from "@/components/FAQ";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import Team from "@/components/Team";
-import Ticker from "@/components/Ticker";
-import Image from "next/image";
 
 export default function Home() {
   return (
     <>
-      <div className="fixed inset-0 -z-10">
-        <Image
-          src="/background.png"
-          alt="Background image"
-          fill
-          style={{ objectFit: "cover" }}
-          quality={100}
-          priority
-        />
-      </div>
-
-      <main className="relative flex flex-col lg:gap-16 items-center min-h-screen text-white">
+      <main className="relative flex flex-col lg:gap-16 items-center min-h-screen text-white bg-background">
 
         <section aria-label="Hero section">
           <Hero />
@@ -29,10 +16,6 @@ export default function Home() {
         <section aria-labelledby="about-heading">
           <h2 id="about-heading" className="sr-only">About Us</h2>
           <About />
-        </section>
-        <section aria-labelledby="ticker-heading">
-          <h2 id="ticker-heading" className="sr-only">Latest Updates</h2>
-          <Ticker />
         </section>
         <section aria-labelledby="services-heading">
           <h2 id="services-heading" className="sr-only">Our Services</h2>

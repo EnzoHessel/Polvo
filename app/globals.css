@@ -4,18 +4,18 @@
 
 @layer base {
   :root {
-    --background: 45, 100%, 1%, 1%;
+    --background: 45, 100%, 1%;
     --foreground: 222.2 84% 4.9%;
-    --primary: 0, 0%, 7%, 1;
+    --primary: 0, 0%, 7%;
     --primary-foreground: 210 40% 98%;
     --secondary: 227, 100%, 46%;
     --secondary-foreground: 88, 82%, 74%;
   }
 
   .dark {
-    --background: 45, 100%, 1%, 1%;
+    --background: 45, 100%, 1%;
     --foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
+    --primary: 0, 0%, 7%%;
     --primary-foreground: 222.2 47.4% 11.2%;
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -37,6 +37,10 @@
 
   body::-webkit-scrollbar-thumb:hover {
     background: #555;
+  }
+
+  body {
+    background-color: hsl(var(--background));
   }
 
   section {

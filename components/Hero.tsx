@@ -65,13 +65,6 @@ const Hero = () => {
       <div className={styles.heroFooter}>
         <p>
           Unleashing the{' '}
-          {/* <TypeAnimation
-            sequence={['_Future', 2000, 'Future_', 2000]}
-            wrapper="span"
-            cursor={true}
-            repeat={Infinity}
-            className="text-secondary"
-          /> */}
           {' '}of Innovation. <br /><br /> <span className="text-secondary">#We are Polvo</span>
         </p>
       </div>
