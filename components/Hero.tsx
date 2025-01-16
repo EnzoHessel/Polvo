@@ -68,6 +68,7 @@ const Hero = () => {
 
       <div className={styles.heroFooter}>
         <p>
+          {/* TODO fix this text to `Unleashing the Future_ of Innovation.` and make a transition*/}
           Unleashing the{' '}
           {' '}of Innovation. <br /><br /> <span className="text-secondary">#We are Polvo</span>
         </p>
