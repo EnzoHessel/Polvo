@@ -1,0 +1,17 @@
+/* TODO make resposive */
+
+.footer {
+  @apply flex justify-center items-center relative;
+}
+
+.footerContent {
+  @apply flex items-center justify-between max-w-[1000px] w-full pt-16 pb-12 z-20;
+}
+
+.footerText {
+  @apply flex flex-col gap-8;
+}
+
+.title {
+  @apply text-base text-white font-normal;
+}
