@@ -57,11 +57,10 @@ const FAQ = () => {
     <div className={styles.content}>
       <div className={styles.container}>
         <h2 className={styles.title}>
-          Perguntas Frequentes <br />
-          (FAQ)
+          Perguntas Frequentes (FAQ)
         </h2>
         <p className={styles.subtitle}>
-          Tudo o que você precisa saber sobre nossos serviços de software, design e desenvolvimento digital.
+          Tudo o que você precisa saber sobre nossos serviços de software, design e <br/> desenvolvimento digital.
         </p>
       </div>
       <div>

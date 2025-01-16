@@ -32,6 +32,10 @@
   font-size: 1.5rem;
 }
 
+.heroTitle {
+  
+}
+
 @media (max-width: 768px) {
   .hero {
     padding: 1rem;

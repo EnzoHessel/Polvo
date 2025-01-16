@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from './ui/button';
-import { TypeAnimation } from 'react-type-animation';
 import styles from '@/styles/hero.module.css';
 
 const Hero = () => {
@@ -18,9 +17,14 @@ const Hero = () => {
       transition={{ duration: 0.5 }}
     >
       <div className={styles.heroText}>
-        <h2>
-          Ninguém inova sozinho. Do Agro ao Varejo. De Fintech a Anytech. A maneira como desenvolvemos software é única.
-        </h2>
+        <div className={styles.heroTitle}>
+          <h2>
+            Ninguém inova sozinho.
+            <br />
+            <br />
+            A maneira como desenvolvemos software é única.
+          </h2>
+        </div>
         <Button variant="default" size="default">
           COMEÇAR AGORA
         </Button>
