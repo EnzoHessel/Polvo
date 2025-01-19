@@ -3,6 +3,7 @@ import styles from '@/styles/footer.module.css';
 import Logo from './Logo'
 import Image from 'next/image';
 import { Button } from './ui/button';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -15,6 +16,14 @@ const Footer = () => {
           <Button variant="default" size="default">
             CONSTRUIR PRESENÇA DIGITAL AGORA
           </Button>
+        </div>
+      </div>
+      <div className={styles.footerBottom}>
+        <div className={styles.footerBottomContent}>
+          <p>© 2024 Polvo. Todos os direitos reservados.</p>
+          <Link href={"https://www.linkedin.com/company/polvosoftwarehouse/posts/?feedView=all"} target='_blank' className={styles.socials}>
+            <Image src={"/icons/Linkedin.svg"} fill alt='linkedin'/>
+          </Link>
         </div>
       </div>
     </footer>
