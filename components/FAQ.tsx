@@ -4,17 +4,14 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import styles from "@/styles/faq.module.css";
 
-// Definindo o tipo para as perguntas e respostas
 type FAQItem = {
   question: string;
   answer: string;
 };
 
 const FAQ = () => {
-  // State para controlar qual FAQ está ativo
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  // Lista de FAQs com perguntas e respostas
   const faqs: FAQItem[] = [
     {
       question: 'Quais serviços de software vocês oferecem?',
@@ -48,7 +45,6 @@ const FAQ = () => {
     },
   ];
 
-  // Função para alternar a exibição do FAQ ativo
   const toggleAccordion = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
@@ -57,11 +53,10 @@ const FAQ = () => {
     <div className={styles.content}>
       <div className={styles.container}>
         <h2 className={styles.title}>
-          Perguntas Frequentes <br />
-          (FAQ)
+          Perguntas Frequentes (FAQ)
         </h2>
         <p className={styles.subtitle}>
-          Tudo o que você precisa saber sobre nossos serviços de software, design e desenvolvimento digital.
+          Tudo o que você precisa saber sobre nossos serviços de software, design e <br/> desenvolvimento digital.
         </p>
       </div>
       <div>

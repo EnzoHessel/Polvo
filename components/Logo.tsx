@@ -7,7 +7,7 @@ const Fredo = Fredoka({ subsets: ['latin'] });
 const Logo = () => (
   <div className="flex gap-3 select-none">
     <Image src="/logo.svg" alt="Logo da Polvo" width={32} height={32} draggable="false"/>
-    <p className={`${Fredo.className} font-normal text-2xl`}>Polvo</p>
+    <p className={`${Fredo.className} font-normal text-2xl text-white`}>Polvo</p>
   </div>
 );
 

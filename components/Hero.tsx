@@ -4,8 +4,8 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from './ui/button';
-import { TypeAnimation } from 'react-type-animation';
 import styles from '@/styles/hero.module.css';
+import Link from 'next/link';
 
 const Hero = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -18,11 +18,18 @@ const Hero = () => {
       transition={{ duration: 0.5 }}
     >
       <div className={styles.heroText}>
-        <h2>
-          Ninguém inova sozinho. Do Agro ao Varejo. De Fintech a Anytech. A maneira como desenvolvemos software é única.
-        </h2>
+        <div className={styles.heroTitle}>
+          <h2>
+            Ninguém inova sozinho.
+            <br />
+            <br />
+            A maneira como desenvolvemos software é única.
+          </h2>
+        </div>
         <Button variant="default" size="default">
-          COMEÇAR AGORA
+          <Link href="https://api.whatsapp.com/send?phone=5511996232675&text=Ol%C3%A1,%20vim%20pela%20Polvo%20e%20gostaria%20de%20um%20or%C3%A7amento%20personalizado." target='_blank'>
+            COMEÇAR AGORA
+          </Link>
         </Button>
       </div>
 
@@ -64,6 +71,7 @@ const Hero = () => {
 
       <div className={styles.heroFooter}>
         <p>
+          {/* TODO fix this text to `Unleashing the Future_ of Innovation.` and make a transition*/}
           Unleashing the{' '}
           {' '}of Innovation. <br /><br /> <span className="text-secondary">#We are Polvo</span>
         </p>

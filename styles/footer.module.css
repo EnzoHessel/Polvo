@@ -1,0 +1,29 @@
+/* TODO make resposive */
+
+.footer {
+  @apply flex justify-center items-center relative flex-col;
+}
+
+.footerContent {
+  @apply flex items-center justify-between max-w-[1000px] w-full pt-16 pb-12 z-20;
+}
+
+.footerText {
+  @apply flex flex-col gap-8;
+}
+
+.title {
+  @apply text-base text-white font-normal;
+}
+
+.footerBottom {
+  @apply flex justify-center items-center relative bg-background w-full h-[120px];
+}
+
+.footerBottomContent {
+  @apply flex items-center justify-between max-w-[1000px] w-full pt-16 pb-12 z-20 text-text-foreground;
+}
+
+.socials {
+  @apply relative w-6 h-6 cursor-pointer hover:-translate-y-0.5 transition-transform;
+}
