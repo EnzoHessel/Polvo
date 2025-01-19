@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from './ui/button';
 import styles from '@/styles/hero.module.css';
+import Link from 'next/link';
 
 const Hero = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -26,7 +27,9 @@ const Hero = () => {
           </h2>
         </div>
         <Button variant="default" size="default">
-          COMEÇAR AGORA
+          <Link href="https://api.whatsapp.com/send?phone=5511996232675&text=Ol%C3%A1,%20vim%20pela%20Polvo%20e%20gostaria%20de%20um%20or%C3%A7amento%20personalizado." target='_blank'>
+            COMEÇAR AGORA
+          </Link>
         </Button>
       </div>
 
