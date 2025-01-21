@@ -18,6 +18,7 @@ const About = () => {
           alt="Imagem de fundo sobre a seção"
           fill
           className={styles.backgroundImage}
+          draggable={false}
         />
       </div>
       <div className={styles.textContainer}>
