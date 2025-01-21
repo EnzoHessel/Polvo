@@ -14,18 +14,10 @@ const About = () => {
     >
       <div className={styles.imageContainer}>
         <Image
-          src="/background-2.png"
+          src="/about.png"
           alt="Imagem de fundo sobre a seção"
           fill
           className={styles.backgroundImage}
-        />
-        <Image
-          src="/logo.svg"
-          alt="Logo da Polvo"
-          width={142}
-          height={142}
-          className={styles.logoImage}
-          draggable="false"
         />
       </div>
       <div className={styles.textContainer}>
