@@ -1,7 +1,7 @@
 /* TODO make resposive */
 
 .footer {
-  @apply flex justify-center items-center relative flex-col;
+  @apply flex justify-center items-center relative flex-col bg-primary;
 }
 
 .footerContent {

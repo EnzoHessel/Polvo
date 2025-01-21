@@ -8,7 +8,6 @@ import Link from 'next/link';
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <Image src="/background-2.png" alt="Instagram" fill objectFit="cover" quality={100}/>
       <div className={styles.footerContent}>
         <div className={styles.footerText}>
           <Logo />
