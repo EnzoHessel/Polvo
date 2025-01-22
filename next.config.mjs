@@ -2,21 +2,34 @@
 const nextConfig = {
   webpack: (config) => {
     config.optimization.splitChunks = {
-      chunks: 'all',
+      chunks: "all",
       minSize: 20000,
       maxSize: 70000,
       minChunks: 1,
-      automaticNameDelimiter: '-',
+      automaticNameDelimiter: "-",
       cacheGroups: {
         vendor: {
           test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          chunks: 'all',
+          name: "vendors",
+          chunks: "all",
         },
       },
     };
 
     return config;
+  },
+  async headers() {
+    return [
+      {
+        source: "/_next/static/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+    ];
   },
 };
 
