@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true, // Garante melhores práticas do React
-  swcMinify: true, // Usa o SWC para minificação mais rápida
   compress: true, // Ativa compressão Gzip para melhorar performance
 
   // Headers para otimizar cache e melhorar carregamento de recursos
