@@ -1,11 +1,11 @@
-/* TODO make resposive */
+/* TODO make responsive */
 
 .footer {
   @apply flex justify-center items-center relative flex-col bg-primary;
 }
 
 .footerContent {
-  @apply flex items-center justify-between max-w-[1000px] w-full pt-16 pb-12 z-20;
+  @apply flex items-center justify-between max-w-[1000px] w-full pt-16 pb-12 z-20 px-4;
 }
 
 .footerText {
@@ -17,7 +17,7 @@
 }
 
 .footerBottom {
-  @apply flex justify-center items-center relative bg-background w-full h-[120px];
+  @apply flex justify-center items-center relative bg-background w-full h-[120px] px-4;
 }
 
 .footerBottomContent {

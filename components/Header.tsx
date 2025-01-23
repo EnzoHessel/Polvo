@@ -22,7 +22,7 @@ const Header = () => {
           animate={{ opacity: 1, y: 0 }}
           className={styles.button}
         >
-          <Button variant="default" size="default">
+          <Button variant="default" size="default" className={styles.button}>
             <Link href="https://api.whatsapp.com/send?phone=5511996232675&text=Ol%C3%A1,%20vim%20pela%20Polvo%20e%20gostaria%20de%20um%20or%C3%A7amento%20personalizado." target='_blank'>
               COMEÇAR AGORA
             </Link>

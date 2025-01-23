@@ -1,25 +1,22 @@
+/* Header Styles */
 .header {
-  @apply flex justify-center items-center bg-primary sticky top-0 z-50 text-white border-b-[#363636] border-b py-5 md:py-4 px-4 sm:px-6 md:px-8 lg:px-12;
+  @apply flex justify-center items-center bg-primary sticky top-0 z-50 text-white border-b-[#363636] border-b py-5 md:py-4 px-4 lg:px-12;
 }
 
 .header__content {
   @apply flex items-center justify-between max-w-[1000px] w-full;
 }
 
+/* Link Styles */
 .link {
   @apply flex gap-12;
-
-  @media screen and (max-width: 640px) {
-    display: none;
-  }
 }
 
 .p__link {
   @apply text-base font-normal uppercase;
 }
 
+/* Button Styles */
 .button {
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
+  @apply md:block hidden;
 }
